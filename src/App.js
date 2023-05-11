@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+import './css/anh.css';
+//import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/header";
+import Home from "./components/navbar/home";
+import Top from "./components/navbar/top.js";
+import Latest from './components/navbar/latest';
+import Login from './components/navbar/login';
+import Error from './components/navbar/error';
+import Footer from "./components/footer";
+import FetchNews from './components/fetch';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <FetchNews/>
+      <Footer/>
+    </>
+    
+    
   );
 }
 
 export default App;
+
+//<div className='main'>
+      
+ //     <FetchNews />
+  //    <Footer/>
+  //  </div>
+
